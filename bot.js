@@ -49,6 +49,9 @@ async function notifyAdmin(userInfo, message) {
   }
   
   try {
+    let userLink = ""
+    if (userInfo.username) {
+      userLink = `@${userInfo.username}`
     const notification = `🔔 НОВОЕ СООБЩЕНИЕ
 
 👤 От: ${userInfo.first_name || 'Неизвестно'}
