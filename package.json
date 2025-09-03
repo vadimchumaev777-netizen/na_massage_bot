@@ -1,0 +1,15 @@
+{
+  "name": "massage-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram бот для записи к детскому массажисту Алёне",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "keywords": ["telegram", "bot", "massage", "children", "booking"],
+  "author": "Alena Massage",
+  "license": "MIT"
+}
