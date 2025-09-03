@@ -52,18 +52,23 @@ async function notifyAdmin(userInfo, message) {
     let userLink = ""
     if (userInfo.username) {
       userLink = `@${userInfo.username}`
+    } else {
+      userLink = userInfo.first_name || 'Пользователь'
+    }
+    
     const notification = `🔔 НОВОЕ СООБЩЕНИЕ
 
-👤 От: ${userInfo.first_name || 'Неизвестно'}
+👤 От: ${userLink}
+📝 Имя: ${userInfo.first_name || 'Неизвестно'} ${userInfo.last_name || ''}
+🆔 ID: ${userInfo.id}
 💬 Сообщение: "${message}"
 📅 Время: ${new Date().toLocaleString('ru-RU')}`
     
     await bot.sendMessage(ADMIN_CHAT_ID, notification)
-    console.log("✅ Уведомление отправлено")
+    console.log("✅ Уведомление отправлено админу")
   } catch (error) {
     console.log('❌ Ошибка уведомления:', error.message)
   }
-}
 
 // Команда /start
 bot.onText(/\/start/, async (msg) => {
