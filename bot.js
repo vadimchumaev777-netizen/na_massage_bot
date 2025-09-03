@@ -19,7 +19,7 @@ app.listen(port, () => {
 
 // Telegram бот
 const token = process.env.TOKEN
-const ADMIN_CHAT_ID = "487990672" // 487990672
+const ADMIN_CHAT_ID = 487990672 // 487990672
 
 if (!token) {
   console.error('❌ Токен не найден!')
@@ -43,7 +43,7 @@ const mainMenu = {
 
 // Функция уведомления админа (УПРОЩЕННАЯ)
 async function notifyAdmin(userInfo, message) {
-  if (!ADMIN_CHAT_ID || ADMIN_CHAT_ID === "487990672") {
+  if (!ADMIN_CHAT_ID || ADMIN_CHAT_ID === 487990672) {
     console.log("⚠️ Chat ID не настроен")
     return
   }
