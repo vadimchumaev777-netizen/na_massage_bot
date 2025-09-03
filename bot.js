@@ -19,7 +19,7 @@ app.listen(port, () => {
 
 // Telegram бот
 const token = process.env.TOKEN
-const ADMIN_CHAT_ID = "YOUR_CHAT_ID" // ЗАМЕНИТЕ НА ВАШ CHAT ID!
+const ADMIN_CHAT_ID = "487990672" // ЗАМЕНИТЕ НА ВАШ CHAT ID!
 
 if (!token) {
   console.error('❌ Токен не найден!')
