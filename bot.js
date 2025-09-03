@@ -43,7 +43,7 @@ const mainMenu = {
 
 // Функция уведомления админа (УПРОЩЕННАЯ)
 async function notifyAdmin(userInfo, message) {
-  if (!ADMIN_CHAT_ID || ADMIN_CHAT_ID === 487990672) {
+  if (!ADMIN_CHAT_ID) {
     console.log("⚠️ Chat ID не настроен")
     return
   }
